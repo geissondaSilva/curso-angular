@@ -1,0 +1,63 @@
+<h1 [title]="descricao">{{title}}</h1>
+
+<div>
+  <button (click)="setarImagemAnimal('cachorro')">Cachorro</button>
+  <button (click)="setarImagemAnimal('gato')">Gato</button>
+  <button (click)="setarImagemAnimal('peixe')">Peixe</button>
+</div>
+
+
+<div *ngIf="true">
+  <!-- Utilizou databing para o link no source da imagem -->
+  <img [src]="linkImagemAnimal" alt="">
+</div>
+
+<!-- Usando template e o ngIf com dataBinding -->
+<div>
+  <ng-template [ngIf]="termineiCurso">
+    <h3>Acabei o curso!</h3>
+  </ng-template>
+</div>
+
+<!-- Usando apenas o ponteiro -->
+<h3 *ngIf="termineiCurso">Acabei o curso</h3>
+
+<!-- Usando o ngif com else junto -->
+<div>
+  <div *ngIf="termineiCurso; then msgterminou else msgnaoterminou"></div>
+  <ng-template #msgterminou>
+    <h3>Parabéns, você concluiu o curso! true.</h3>
+  </ng-template>
+  <ng-template #msgnaoterminou>
+    <h3>Boa sorte em seus estudos! false.</h3>
+  </ng-template>
+</div>
+
+<h4>Qual sua fruta preferida?</h4>
+<ul>
+  <li 
+    *ngFor="let fruta of frutas;
+      index as i;count as qtd;
+      first as primeiro;
+      last as ultimo;
+      even as par;
+      odd as impar">
+        {{i + 1}}/{{qtd}} - {{fruta}}
+        <!-- <b>{{primeiro ? ' Minha primeira fruta' : ''}}</b>
+        <i>{{ultimo ? ' Ultima fruta' : ''}}</i>
+        <u>{{par ? ' Indice par' : ''}}</u>
+        <u>{{impar ? 'Indice impar' : ''}}</u> -->
+        <!-- <button (click)="remover(i)">Remover</button> -->
+        <button *ngIf="fruta !== frutaPreferida" (click)="favoritarFruta(fruta)">Favoritar</button>
+    </li>
+</ul>
+
+<h6>Sua fruta preferia é {{frutaPreferida}}</h6>
+
+<div [ngSwitch]="frutaPreferida">
+  <span *ngSwitchCase="'Maça'">Fruta vermelha</span>
+  <span *ngSwitchCase="'pera'">Fruta verde</span>
+  <span *ngSwitchCase="'abacaxi'">Fruta amarela</span>
+  <span *ngSwitchCase="'pessego'">Fruta laranja</span>
+  <span *ngSwitchDefault>Não tenho fruta favorita!</span>
+</div>
