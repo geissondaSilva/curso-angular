@@ -1,0 +1,11 @@
+<div class="container">
+    <form>
+        <div class="input-container">
+            <label>Nome</label>
+            <input type="text" [(ngModel)]="contato.nome" [ngModelOptions]="{standalone: true}" required>
+        </div>
+        <div class="row main-axis-end">
+            <button (click)="enviar()">Enviar</button>
+        </div>
+    </form>
+</div>
