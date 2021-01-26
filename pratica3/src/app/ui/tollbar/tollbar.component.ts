@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./tollbar.component.css']
 })
 export class TollbarComponent implements OnInit {
+
+    public tituloTela: string = 'Loja de carros';
+    
     constructor() { }
 
     ngOnInit(): void { }

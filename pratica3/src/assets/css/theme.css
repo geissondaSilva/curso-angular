@@ -1,0 +1,12 @@
+.primary, .nav-bar, .btn-primary {
+    background-color: #3F51B5;
+    color: white;
+}
+
+.btn-primary {
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    height: 32px;
+    padding: 0 24px;
+}

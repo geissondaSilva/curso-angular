@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import { BarraComponent } from './barra/barra.component';
 import { CarroComponent } from './carro/carro.component';
 
-
+const EXPORTS = [BarraComponent, CarroComponent];
 
 @NgModule({
-  declarations: [BarraComponent, CarroComponent],
+  declarations: [...EXPORTS],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [...EXPORTS]
 })
 export class ComponentsModule { }

@@ -1,0 +1,8 @@
+.nav-bar {
+    height: 68px;
+    box-sizing: border-box;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

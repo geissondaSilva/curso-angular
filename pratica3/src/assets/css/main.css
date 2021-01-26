@@ -1,0 +1,57 @@
+@import './tipografia.css';
+@import './theme.css';
+
+html, body {
+    margin: 0;
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+
+
+.container {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-axis-start {
+    justify-content: flex-start;
+}
+
+.main-axis-end {
+    justify-content: flex-end;
+}
+
+.main-axis-center {
+    justify-content: center;
+}
+
+.input-container {
+    margin: 8px 0;
+}
+
+.input-container input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 32px;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+.input-container label {
+    font-size: 12pt;
+    margin-bottom: 8px;
+}

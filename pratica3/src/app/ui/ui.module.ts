@@ -5,6 +5,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { FormsModule } from '@angular/forms';
 import { RodapeComponent } from './rodape/rodape.component';
 import { ListaCarrosComponent } from './lista-carros/lista-carros.component';
+import { ComponentsModule } from '../components/components.module';
 
 const PUBLIC_ARTEFACTS = [
   TollbarComponent,
@@ -21,6 +22,7 @@ const PUBLIC_ARTEFACTS = [
   imports: [
     CommonModule,
     FormsModule,
+    ComponentsModule,
   ],
   exports: [
     ...PUBLIC_ARTEFACTS
