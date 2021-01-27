@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TollbarComponent implements OnInit {
 
-    public tituloTela: string = 'Loja de carros';
-    
+    public tituloTela = 'Loja de carros';
+
     constructor() { }
 
     ngOnInit(): void { }
+
+    public quandoPesquisar(valor: string): void {
+        console.log(valor);
+    }
 }

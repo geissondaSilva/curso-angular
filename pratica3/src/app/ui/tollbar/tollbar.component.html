@@ -1,1 +1,3 @@
-<app-barra [title]="tituloTela" [descricao]="'Está é uma revendedora de carros'"></app-barra>
+<app-barra [title]="tituloTela" [descricao]="'Está é uma revendedora de carros'">
+    <app-pesquisa (pesquisar)="quandoPesquisar($event)"></app-pesquisa>
+</app-barra>

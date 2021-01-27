@@ -3,6 +3,13 @@
     box-sizing: border-box;
     padding: 0 32px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    flex-grow: 1;
 }
