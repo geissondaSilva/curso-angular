@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Carro } from 'src/app/models/carro';
 
 @Component({
   selector: 'app-carro',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carro.component.css']
 })
 export class CarroComponent implements OnInit {
+
+  @ViewChild('img', { static: true })
+  private imagemEl: ElementRef<HTMLDivElement>;
+
+  @Input() public carro: Carro = {};
 
   constructor() { }
 

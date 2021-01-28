@@ -5,9 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { BarraComponent } from './barra/barra.component';
 import { CarroComponent } from './carro/carro.component';
 import { PesquisaComponent } from './pesquisa/pesquisa.component';
-import { TextoComponent } from './texto/texto.component';
 
-const EXPORTS = [BarraComponent, CarroComponent, PesquisaComponent, TextoComponent];
+const EXPORTS = [BarraComponent, CarroComponent, PesquisaComponent];
 
 @NgModule({
   declarations: [...EXPORTS],
