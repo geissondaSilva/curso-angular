@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { CarroComponent } from 'src/app/components/carro/carro.component';
 
 import { Carro } from 'src/app/models/carro';
 import { BASE_CARROS } from '../data/base-carros';
@@ -10,6 +11,9 @@ import { BASE_CARROS } from '../data/base-carros';
 })
 export class ListaCarrosComponent implements OnInit {
 
+  @ViewChildren(CarroComponent)
+  public listaComponents: QueryList<CarroComponent>;
+
   public listaCarros: Carro[] = [];
 
   constructor() {
@@ -17,6 +21,12 @@ export class ListaCarrosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  public aplicarDescontoAvista(): void {
+    this.listaComponents.forEach(c => {
+      c.aplicarDesconto(0.2);
+    });
   }
 
 }

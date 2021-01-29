@@ -1,5 +1,8 @@
 <div class="container">
+    <div style="margin-top: 32px;" class="row main-axis-end">
+        <button (click)="aplicarDescontoAvista()" class="btn-primary">Aplicar desconto Avista!</button>
+    </div>
     <div class="lista-carros">
-        <app-carro [carro]="item" *ngFor="let item of listaCarros"></app-carro>
+        <app-carro #carros [carro]="item" *ngFor="let item of listaCarros"></app-carro>
     </div>
 </div>

@@ -11,11 +11,21 @@ export class CarroComponent implements OnInit {
   @ViewChild('img', { static: true })
   private imagemEl: ElementRef<HTMLDivElement>;
 
-  @Input() public carro: Carro = {};
+  @Input() public carro: Carro;
+
+  private descontoAplicado = false;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.imagemEl.nativeElement.style.backgroundImage = `url("${this.carro.imagem}")`;
+  }
+
+  public aplicarDesconto(desconto: number): void {
+    if (this.carro.valor !== undefined && !this.descontoAplicado) {
+      this.carro.valor = this.carro.valor - this.carro.valor * desconto;
+      this.descontoAplicado = true;
+    }
   }
 
 }

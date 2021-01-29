@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Contato } from '../../models/contato';
 
 @Component({
@@ -10,10 +11,14 @@ export class ContatoComponent implements OnInit {
 
   public contato: Contato = {};
 
+  public form: FormGroup;
+
   constructor() {
-    this.contato.nome = 'Geisson';
-    this.contato.email = '';
-    this.contato.mensagem = '';
+    this.form = new FormGroup({
+      nome: new FormControl(),
+      email: new FormControl(),
+      mensagem: new FormControl(),
+    });
   }
 
   ngOnInit(): void {
