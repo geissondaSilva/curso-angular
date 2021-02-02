@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-barra',
-  templateUrl: './barra.component.html',
-  styleUrls: ['./barra.component.css']
+    selector: '.barra, .nav-bar',
+    templateUrl: './barra.component.html',
+    styleUrls: ['./barra.component.css'],
+    viewProviders: [],
+    inputs: ['title:titulo'],
+    encapsulation: ViewEncapsulation.None
 })
 export class BarraComponent implements OnInit {
 
-  constructor() { }
+    public title: string = '';
 
-  ngOnInit(): void {
-  }
+    constructor() { }
+
+    ngOnInit(): void {
+    }
 
 }

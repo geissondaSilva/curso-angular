@@ -1,0 +1,51 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    background-color: #f1f1f1;
+    display: flex;
+    height: 100%;
+}
+
+.view, .ferramentas {
+    height: 100%;
+}
+
+.view {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ferramentas {
+    width: 350px;
+    border-left: 1px solid #ccc;
+    background-color: white;
+    display: block;
+}
+
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: #e2e2e2;
+}
+
+.ferramenta-item {
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+input {
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    height: 32px;
+    padding: 0 8px;
+}
+
+input:focus {
+    outline: none;
+}

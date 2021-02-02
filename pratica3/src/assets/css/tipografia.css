@@ -1,0 +1,15 @@
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/roboto/Roboto-Bold.ttf);
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    font-family: roboto;
+}

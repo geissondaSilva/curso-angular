@@ -9,4 +9,8 @@ export class TollbarComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void { }
+
+    onPesquisar(value: string) {
+        console.log('Pesquisou por: ' + value)
+    }
 }
