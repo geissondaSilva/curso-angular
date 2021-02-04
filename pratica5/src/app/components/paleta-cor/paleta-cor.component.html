@@ -1,0 +1,9 @@
+<!-- <button (click)="mudarCor('green')" >Verde</button>
+<button (click)="mudarCor('red')" >Vermelho</button>
+<button (click)="mudarCor('blue')" >Azul</button>
+
+<div [style.color]="cor">texto da paleta</div> -->
+
+<div class="lista-cores">
+    <div *ngFor="let item of cores" (click)="mudarCor(item)" [style.background-color]="item" class="cor"></div>
+</div>
