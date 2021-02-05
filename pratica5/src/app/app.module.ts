@@ -6,6 +6,7 @@ import { PainelComponent } from './components/painel/painel.component';
 import { FerramentasComponent } from './components/ferramentas/ferramentas.component';
 import { PaletaCorComponent } from './components/paleta-cor/paleta-cor.component';
 import { TextoDirective } from './directives/texto.directive';
+import { ValueComponent } from './components/value/value.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { TextoDirective } from './directives/texto.directive';
     PainelComponent,
     FerramentasComponent,
     PaletaCorComponent,
-    TextoDirective
+    TextoDirective,
+    ValueComponent
   ],
   imports: [
     BrowserModule

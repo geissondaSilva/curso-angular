@@ -16,5 +16,6 @@ export class Texto {
     public set cor(value: string) {
         this._cor = value;
         this.contexto.color = value;
+        this.contexto.title = value;
     }
 }
