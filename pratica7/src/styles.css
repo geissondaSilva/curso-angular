@@ -1,0 +1,23 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pesquisa {
+    flex-grow: 1;
+}
+
+.lista-filmes {
+    flex-grow: 2;
+    display: flex;
+}
+
+app-filmes-assitidos, app-filmes-transmitidos {
+    flex: 1;
+}

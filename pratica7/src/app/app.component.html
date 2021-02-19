@@ -1,0 +1,21 @@
+<!-- <button (click)="comecarStream()">Comecar Stream</button>
+<button (click)="assinarNetflix()" *ngIf="!inscricaoCliente">Assinar netflix</button>
+<button (click)="cancelarAssinatura()" *ngIf="inscricaoCliente">Cancelar netflix</button>
+
+<h3>Filmes recebidos pelo cliente: </h3>
+
+<div>
+  <ul>
+    <li *ngFor="let item of filmesRecebidos">{{item}}</li>
+  </ul>
+</div> -->
+
+<div class="container">
+  <div class="pesquisa">
+    <app-barra-pesquisa></app-barra-pesquisa>
+  </div>
+  <div class="lista-filmes">
+    <app-filmes-transmitidos></app-filmes-transmitidos>
+    <app-filmes-assitidos></app-filmes-assitidos>
+  </div>
+</div>
