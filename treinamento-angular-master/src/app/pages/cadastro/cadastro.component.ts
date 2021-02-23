@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ConfirmarSenhaValidator } from 'src/app/validators/confirmar-senha-validator';
 
 @Component({
   selector: 'app-cadastro',
@@ -19,12 +20,19 @@ export class CadastroComponent implements OnInit {
         Validators.required,
         Validators.email
       ])],
-      senha: [null, Validators.required],
+      senha: [null, Validators.compose([
+        Validators.required, ConfirmarSenhaValidator
+      ])],
       confirmarSenha: [null, Validators.required]
     });
   }
 
   ngOnInit() {
+  }
+
+
+  public get senha() {
+      return this.form.get('senha');
   }
 
 }

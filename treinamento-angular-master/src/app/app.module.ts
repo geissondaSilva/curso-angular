@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
+import { FormularioModule } from './modules/formulario/formulario.module';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
     ReactiveFormsModule,
     HttpClientModule,
     FlexLayoutModule,
+    FormularioModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
