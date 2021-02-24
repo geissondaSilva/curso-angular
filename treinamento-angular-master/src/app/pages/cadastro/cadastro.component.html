@@ -9,14 +9,14 @@
             <mat-form-field [appearance]="'outline'">
                 <mat-label>Nome</mat-label>
                 <input matInput formControlName="nome" type="text">
-                <mat-error>Email obrigatório</mat-error>
+                <mat-error>{{nome.errors | erro}}</mat-error>
             </mat-form-field>
 
             <!-- Email -->
             <mat-form-field [appearance]="'outline'">
                 <mat-label>E-mail</mat-label>
                 <input matInput formControlName="email" required placeholder="seunome@examplo.com" type="email">
-                <mat-error>Email obrigatório</mat-error>
+                <mat-error>{{email.errors | erro}}</mat-error>
             </mat-form-field>
 
             <!-- Senha -->
@@ -30,8 +30,14 @@
             <mat-form-field [appearance]="'outline'">
                 <mat-label>Confirmar senha</mat-label>
                 <input matInput formControlName="confirmarSenha" required placeholder="Digite novamente sua senha" type="password">
-                <mat-error>Email obrigatório</mat-error>
+                <mat-error>{{confirmarSenha.errors | erro}}</mat-error>
             </mat-form-field>
         </mat-card-content>
+
+        <mat-card-actions>
+            <div fxLayout fxLayoutGap="16px">
+                <button mat-raised-button [disabled]="form.invalid || loading" (click)="cadastrar()" color="primary">Cadastrar</button>
+            </div>
+        </mat-card-actions>
     </mat-card>
 </form>

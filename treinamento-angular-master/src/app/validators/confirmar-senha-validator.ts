@@ -1,8 +1,12 @@
-import { FormControl, ValidationErrors, ValidatorFn } from "@angular/forms";
+import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 
-export const ConfirmarSenhaValidator: ValidatorFn = (control: FormControl): ValidationErrors | null => {
-    if (control.value == '123') {
-        return { invalido: "A senha não pode ser 123" }
+export class ConfirmarSenhaValidator {
+    static validar(senha: AbstractControl): ValidatorFn {
+        return (control: AbstractControl): ValidationErrors | null => {
+            if (senha.value !== control.value) {
+                return { naoConfere: 'As senhas não conferem!' };
+            }
+            return null;
+        };
     }
-    return null;
 }
