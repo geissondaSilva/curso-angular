@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-empresa',
@@ -16,36 +16,27 @@ export class EmpresaComponent {
 
   public criarForm(): void {
     this.form = this.fb.group({
-      razaoSocial: [null],
-      fantasia: [null],
-      cnpj: [null],
-      segmentos: new FormArray([new FormControl()]),
-      contatos: this.fb.array([
-        this.criarFormContatos()
-      ])
+      razaoSocial: [null, Validators.required],
+      fantasia: [null, Validators.required],
+      cnpj: [null, Validators.required],
     });
   }
 
-  public criarFormContatos(): FormGroup {
-    return this.fb.group({
-      pessoa: [null],
-      telefone: [null]
-    });
+  public get razaoSocial() {
+    return this.form.get('razaoSocial');
   }
 
-  public get segmentos(): FormArray {
-    return this.form.get('segmentos') as FormArray;
+  public get fantasia() {
+    return this.form.get('fantasia');
   }
 
-  public get contatos(): FormArray {
-    return this.form.get('contatos') as FormArray;
+  public get cnpj() {
+    return this.form.get('cnpj');
   }
 
-  public novoSegmento() {
-    this.segmentos.push(new FormControl());
-  }
+  public salvar() {
+    if (this.form.valid) {
 
-  public novoContato() {
-    this.contatos.push(this.criarFormContatos());
+    }
   }
 }

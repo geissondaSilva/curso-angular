@@ -6,6 +6,7 @@ import { EmpresaComponent } from './empresa.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../../material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormularioModule } from '../../formulario/formulario.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormularioModule,
   ]
 })
 export class EmpresaModule { }

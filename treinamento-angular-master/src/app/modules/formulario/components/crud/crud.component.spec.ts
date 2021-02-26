@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GeradorAvatarComponent } from './gerador-avatar.component';
+import { CrudComponent } from './crud.component';
 
-describe('GeradorAvatarComponent', () => {
-  let component: GeradorAvatarComponent;
-  let fixture: ComponentFixture<GeradorAvatarComponent>;
+describe('CrudComponent', () => {
+  let component: CrudComponent;
+  let fixture: ComponentFixture<CrudComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GeradorAvatarComponent ]
+      declarations: [ CrudComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GeradorAvatarComponent);
+    fixture = TestBed.createComponent(CrudComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
