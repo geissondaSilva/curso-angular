@@ -8,10 +8,12 @@ import { MaterialModule } from './modules/material.module';
 import { LoginComponent } from './pages/login/login.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { FormularioModule } from './modules/formulario/formulario.module';
+import { HttpInterceptadorService } from './services/http-interceptador.service';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { FormularioModule } from './modules/formulario/formulario.module';
     FlexLayoutModule,
     FormularioModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptadorService, multi: true, deps: [AuthService] },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

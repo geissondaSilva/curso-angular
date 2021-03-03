@@ -5,7 +5,13 @@ import { EmpresaComponent } from './empresa.component';
 
 const routes: Routes = [
   {
-    path: '', component: EmpresaComponent
+    path: '', redirectTo: 'novo', pathMatch: 'full'
+  },
+  {
+    path: 'novo', component: EmpresaComponent
+  },
+  {
+    path: ':id', component: EmpresaComponent
   }
 ];
 

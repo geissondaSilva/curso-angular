@@ -1,39 +1,29 @@
-<form [formGroup]="form" (ngSubmit)="salvar()" #fr="ngForm">
-  <mat-card class="tela">
-    <mat-card-header>
-      <mat-card-title>Empresa</mat-card-title>
-    </mat-card-header>
+<form [formGroup]="form" #fr="ngForm">
 
-    <mat-card-content>
-      <div fxLayout="column" fxLayoutGap="16px">
+  <app-crud [form]="fr" titulo="Empresa" [api]="service">
+    <div fxLayout="column" fxLayoutGap="16px">
+
+      <mat-form-field fxFlex [appearance]="'outline'">
+        <mat-label>Razão Social</mat-label>
+        <input matInput type="text" formControlName="razaoSocial">
+        <mat-error>{{razaoSocial.errors | erro}}</mat-error>
+      </mat-form-field>
+
+      <div fxLayout="row" fxLayoutGap="16px">
 
         <mat-form-field fxFlex [appearance]="'outline'">
-          <mat-label>Razão Social</mat-label>
-          <input matInput type="text" formControlName="razaoSocial">
-          <mat-error>{{razaoSocial.errors | erro}}</mat-error>
+          <mat-label>Nome fantasia</mat-label>
+          <input matInput type="text" formControlName="fantasia">
+          <mat-error>{{fantasia.errors | erro}}</mat-error>
         </mat-form-field>
 
-        <div fxLayout="row" fxLayoutGap="16px">
+        <mat-form-field [appearance]="'outline'">
+          <mat-label>CNPJ</mat-label>
+          <input matInput type="text" formControlName="cnpj">
+          <mat-error>{{cnpj.errors | erro}}</mat-error>
+        </mat-form-field>
 
-          <mat-form-field fxFlex [appearance]="'outline'">
-            <mat-label>Nome fantasia</mat-label>
-            <input matInput type="text" formControlName="fantasia">
-            <mat-error>{{fantasia.errors | erro}}</mat-error>
-          </mat-form-field>
-
-          <mat-form-field [appearance]="'outline'">
-            <mat-label>CNPJ</mat-label>
-            <input matInput type="text" formControlName="cnpj">
-            <mat-error>{{cnpj.errors | erro}}</mat-error>
-          </mat-form-field>
-
-        </div>
       </div>
-    </mat-card-content>
-
-    <mat-card-actions fxLayoutAlign="end start">
-      <button type="submit" color="primary" mat-raised-button>Salvar</button>
-    </mat-card-actions>
-
-  </mat-card>
+    </div>
+  </app-crud>
 </form>
